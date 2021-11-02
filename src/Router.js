@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./view/Login";
 import Register from "./view/Register";
-import ScrumApp from "./view/Scrum/ScrumApp";
+import Scrum from "./view/Scrum";
 
 const Router = () => {
   return (
@@ -14,7 +14,10 @@ const Router = () => {
           <Register />
         </Route>
         <Route path="/app">
-          <ScrumApp />
+          <Scrum />
+        </Route>
+        <Route path="/">
+          <Redirect to="/app" />
         </Route>
       </Switch>
     </BrowserRouter>
