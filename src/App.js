@@ -3,7 +3,7 @@ import Router from "./Router";
 
 function App() {
   return (
-    <React.Fragment>
+    <React.Fragment classname="w-screen">
       <Router />
     </React.Fragment>
   );
