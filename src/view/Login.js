@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { LOGIN } from "../store/Auth/auth.store";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const loginHandler = () => {
+    if (!email && !password) return;
+    dispatch(
+      LOGIN({
+        type: "LOGIN",
+        payload: {
+          email,
+          password,
+        },
+      })
+    );
+  };
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card py-10 w-full max-w-md  border-2">
@@ -15,6 +36,7 @@ const Login = () => {
               type="text"
               placeholder="email"
               className="input input-bordered"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="form-control">
@@ -25,6 +47,7 @@ const Login = () => {
               type="text"
               placeholder="password"
               className="input input-bordered"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <label className="label">
               <Link to="/forgot-password" className="label-text-alt">
@@ -38,7 +61,12 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <input type="button" value="Login" className="btn btn-primary" />
+            <input
+              onClick={loginHandler}
+              type="button"
+              value="Login"
+              className="btn btn-primary"
+            />
           </div>
         </div>
       </div>
