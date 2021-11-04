@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 const Scrum = () => {
   return (
     <div className="w-screen h-screen flex">
-      <div className="w-20 border-r-2">
+      <div className="w-16 border-r-2">
         <Sidebar />
       </div>
       <div className="w-full">
