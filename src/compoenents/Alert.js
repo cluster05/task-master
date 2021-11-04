@@ -12,7 +12,7 @@ const Alert = () => {
   return (
     <div>
       {alert.success || alert.warning || alert.info || alert.error ? (
-        <div className={`alert alert-${alertType}`}>
+        <div className={`absolute top-0 left-0 alert alert-${alertType}`}>
           <div className="flex-1">
             <label> {alert.message} </label>
           </div>
