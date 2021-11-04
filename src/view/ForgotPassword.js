@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ForgotPassword = () => {
   return (
@@ -16,7 +17,11 @@ const ForgotPassword = () => {
               className="input input-bordered"
             />
           </div>
-
+          <label className="label">
+            <Link to="/login" className="label-text-alt">
+              Login in account
+            </Link>
+          </label>
           <div className="form-control mt-6">
             <input
               type="button"
