@@ -21,10 +21,6 @@ export const authSlice = createSlice({
     FORGOT_PASSWORD: (state, action) => {
       console.log("[FORGOT_PASSWORD] called");
     },
-    RESET_PASSWORD: (state, action) => {
-      console.log("[RESET_PASSWORD] called");
-    },
-    AUTH_GRARD: (state, action) => {},
   },
 });
 

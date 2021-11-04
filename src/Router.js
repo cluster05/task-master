@@ -6,6 +6,7 @@ import AdminRouter from "./routes/AdminRouter";
 import { useDispatch, useSelector } from "react-redux";
 import { INITIAL_APP_LOADING } from "./store/Auth/auth.store";
 import React, { useEffect } from "react";
+import ForgotPassword from "./view/ForgotPassword";
 
 const Router = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,9 @@ const Router = () => {
         </Route>
         <Route exact path="/register">
           <Register />
+        </Route>
+        <Route exact path="/forgot-password">
+          <ForgotPassword />
         </Route>
         <Route
           exact
