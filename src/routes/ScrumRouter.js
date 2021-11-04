@@ -9,7 +9,7 @@ import Settings from "../view/Scrum/Settings";
 import Tasks from "../view/Scrum/Tasks";
 
 const ScrumRouter = () => {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
 
   return (
     <div>
