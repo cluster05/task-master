@@ -1,7 +1,8 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Login from "./view/Login";
 import Register from "./view/Register";
-import Scrum from "./view/Scrum";
+import ScrumRouter from "./routes/ScrumRouter";
+import AdminRouter from "./routes/AdminRouter";
 
 const Router = () => {
   return (
@@ -14,7 +15,10 @@ const Router = () => {
           <Register />
         </Route>
         <Route path="/app">
-          <Scrum />
+          <ScrumRouter />
+        </Route>
+        <Route path="/admin">
+          <AdminRouter />
         </Route>
         <Route path="/">
           <Redirect to="/app" />

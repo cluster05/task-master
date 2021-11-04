@@ -1,7 +1,7 @@
 import React from "react";
 
-const Scrum = () => {
+const Projects = () => {
   return <div></div>;
 };
 
-export default Scrum;
+export default Projects;
