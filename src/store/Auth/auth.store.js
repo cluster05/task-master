@@ -6,34 +6,35 @@ export const authSlice = createSlice({
     isAuthanticated: false,
   },
   reducers: {
-    initailAppAuthCheck: (state) => {
-      console.log("[initailAppAuthCheck] called");
+    INITIAL_APP_LOADING: (state) => {
+      console.log("[INITIAL_APP_LOADING] called");
     },
-    register: (state, action) => {
-      console.log("[register] called");
+    LOGIN: (state, action) => {
+      console.log("[LOGIN] called");
     },
-    login: (state, aciton) => {
-      console.log("[login] called");
+    LOGOUT: (state, aciton) => {
+      console.log("[LOGOUT] called");
     },
-    logout: (state, action) => {
-      console.log("[logout] called");
+    REGISTER: (state, action) => {
+      console.log("[REGISTER] called");
     },
-    forgotPassword: (state, action) => {
-      console.log("[forgotPassword] called");
+    FORGOT_PASSWORD: (state, action) => {
+      console.log("[FORGOT_PASSWORD] called");
     },
-    resetPassoword: (state, action) => {
-      console.log("[resetPassoword] called");
+    RESET_PASSWORD: (state, action) => {
+      console.log("[RESET_PASSWORD] called");
     },
+    AUTH_GRARD: (state, action) => {},
   },
 });
 
 export const {
-  initailAppAuthCheck,
-  register,
-  login,
-  logout,
-  forgotPassword,
-  resetPassoword,
+  INITIAL_APP_LOADING,
+  LOGIN,
+  LOGOUT,
+  REGISTER,
+  FORGOT_PASSWORD,
+  RESET_PASSWORD,
 } = authSlice.actions;
 
 export default authSlice.reducer;

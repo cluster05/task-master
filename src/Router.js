@@ -3,26 +3,44 @@ import Login from "./view/Login";
 import Register from "./view/Register";
 import ScrumRouter from "./routes/ScrumRouter";
 import AdminRouter from "./routes/AdminRouter";
+import { useDispatch, useSelector } from "react-redux";
+import { INITIAL_APP_LOADING } from "./store/Auth/auth.store";
+import React, { useEffect } from "react";
 
 const Router = () => {
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
+  useEffect(() => {
+    dispatch(INITIAL_APP_LOADING());
+  }, []);
+
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login />
         </Route>
-        <Route path="/register">
+        <Route exact path="/register">
           <Register />
         </Route>
-        <Route path="/app">
-          <ScrumRouter />
-        </Route>
-        <Route path="/admin">
-          <AdminRouter />
-        </Route>
-        <Route path="/">
+        <Route
+          exact
+          path="/app"
+          render={() =>
+            auth.isAuthanticated ? <ScrumRouter /> : <Redirect to="/login" />
+          }
+        />
+        <Route
+          exact
+          path="/admin"
+          render={() =>
+            auth.isAuthanticated ? <AdminRouter /> : <Redirect to="/login" />
+          }
+        />
+        <Route exact path="/">
           <Redirect to="/app" />
         </Route>
+        <Route path="**" render={() => <div>Page Not Found</div>} />
       </Switch>
     </BrowserRouter>
   );
