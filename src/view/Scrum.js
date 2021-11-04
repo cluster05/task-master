@@ -6,10 +6,10 @@ import Sidebar from "../components/Sidebar/Sidebar";
 const Scrum = () => {
   return (
     <div className="w-screen h-screen flex">
-      <div className="bg-gray-900 w-20">
+      <div className="w-20 border-r-2">
         <Sidebar />
       </div>
-      <div className="bg-gray-500 w-full">
+      <div className="w-full">
         <Switch>
           <Route path="/">
             <Scrumify />

@@ -1,0 +1,6 @@
+.icon .title {
+  display: none;
+}
+.icon:hover .title {
+  display: block;
+}
