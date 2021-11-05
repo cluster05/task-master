@@ -25,6 +25,5 @@
 }
 .Toastify__toast-body {
   @apply text-sm;
-  @apply whitespace-nowrap;
   font-family: "Rubik", sans-serif !important;
 }
