@@ -11,6 +11,12 @@ const ForgotPassword = () => {
       toast.error("Email is required field");
       return;
     }
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(email.toLowerCase())) {
+      toast.error("Email is not valid");
+      return;
+    }
     forgotPassword(email);
   };
 
@@ -24,7 +30,7 @@ const ForgotPassword = () => {
               <span className="label-text">Email</span>
             </label>
             <input
-              type="text"
+              type="email"
               placeholder="email"
               className="input input-bordered"
               onChange={(e) => setEmail(e.target.value)}

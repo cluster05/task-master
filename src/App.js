@@ -2,7 +2,7 @@ import Router from "./Router";
 import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import { AiFillCloseCircle } from "react-icons/ai";
+import CloseToastButton from "./compoenents/Shared/CloseToastButton";
 
 function App() {
   return (
@@ -13,11 +13,7 @@ function App() {
         hideProgressBar={true}
         pauseOnHover={false}
         icon={false}
-        closeButton={
-          <span className="text-white text-xl mr-2">
-            <AiFillCloseCircle />
-          </span>
-        }
+        closeButton={<CloseToastButton />}
         theme="colored"
       />
     </React.Fragment>
