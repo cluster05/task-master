@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { register as registerAuth } from "../services/auth.service";
+import { registerAuth } from "../services/auth.service";
 import { useForm } from "react-hook-form";
 
 const Register = () => {
@@ -14,7 +14,6 @@ const Register = () => {
   } = useForm();
 
   const registerHandler = (data) => {
-    console.log(data);
     registerAuth(data);
   };
 

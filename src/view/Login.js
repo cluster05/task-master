@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { login as loginAuth } from "../services/auth.service";
+import { loginAuth } from "../services/auth.service";
 import { useForm } from "react-hook-form";
 
 const Login = () => {

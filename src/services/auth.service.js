@@ -1,13 +1,13 @@
-const login = (email, password) => {
+const loginAuth = ({ email, password }) => {
   console.log("[Auth Serive] [ login ] called");
 };
 
-const register = (username, email, password) => {
+const registerAuth = ({ username, email, password }) => {
   console.log("[Auth Serive] [ register ] called");
 };
 
-const forgotPassword = (email) => {
+const forgotPassword = ({ email }) => {
   console.log("[Auth Serive] [ forgotPassword ] called");
 };
 
-export { login, register, forgotPassword };
+export { loginAuth, registerAuth, forgotPassword };
