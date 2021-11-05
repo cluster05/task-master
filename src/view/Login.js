@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -7,7 +8,10 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const loginHandler = () => {
-    if (!email && !password) return;
+    if (!email && !password) {
+      toast.error("Email and Password are required field");
+      return;
+    }
   };
 
   return (
