@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 import { forgotPassword } from "../services/auth.service";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
 
   const forgotPasswordHandler = () => {
-    if (!email) {
-      toast.error("Email is required field");
-      return;
-    }
     forgotPassword(email);
   };
 

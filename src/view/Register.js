@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { register } from "../services/auth.service";
@@ -11,10 +10,6 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const registerHandler = () => {
-    if (!email || !password || !username) {
-      toast.error("Username, Email and Password are required field");
-      return;
-    }
     register(username, email, password);
   };
 
