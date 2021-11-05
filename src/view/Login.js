@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { login } from "../services/auth.service";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -9,10 +10,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const loginHandler = () => {
-    if (!email || !password) {
-      toast.error("Email and Password are required field");
-      return;
-    }
+    login(email, password);
   };
 
   const toggleShowPasswordHandler = () => {
@@ -48,7 +46,7 @@ const Login = () => {
               />
               <span
                 onClick={toggleShowPasswordHandler}
-                class="absolute top-0 right-0 rounded-l-none btn btn-outline"
+                className="absolute top-0 right-0 rounded-l-none btn btn-outline"
               >
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </span>

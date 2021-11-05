@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { register } from "../services/auth.service";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -13,6 +15,7 @@ const Register = () => {
       toast.error("Username, Email and Password are required field");
       return;
     }
+    register(username, email, password);
   };
 
   const toggleShowPasswordHandler = () => {
@@ -59,12 +62,17 @@ const Register = () => {
               />
               <span
                 onClick={toggleShowPasswordHandler}
-                class="absolute top-0 right-0 rounded-l-none btn btn-outline"
+                className="absolute top-0 right-0 rounded-l-none btn btn-outline"
               >
                 {showPassword ? <FaEye /> : <FaEyeSlash />}
               </span>
             </div>
           </div>
+          <label className="label">
+            <Link to="/login" className="label-text-alt">
+              Already have account ? Log in
+            </Link>
+          </label>
           <div className="form-control mt-6">
             <input
               type="button"
