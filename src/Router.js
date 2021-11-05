@@ -3,18 +3,10 @@ import Login from "./view/Login";
 import Register from "./view/Register";
 import ScrumRouter from "./routes/ScrumRouter";
 import AdminRouter from "./routes/AdminRouter";
-import { useDispatch, useSelector } from "react-redux";
-import { INITIAL_APP_LOADING } from "./store/Auth/auth.store";
-import React, { useEffect } from "react";
+import React from "react";
 import ForgotPassword from "./view/ForgotPassword";
 
 const Router = () => {
-  const dispatch = useDispatch();
-  const auth = useSelector((state) => state.auth);
-  useEffect(() => {
-    dispatch(INITIAL_APP_LOADING());
-  }, []);
-
   return (
     <BrowserRouter>
       <Switch>
@@ -30,16 +22,12 @@ const Router = () => {
         <Route
           exact
           path="/app"
-          render={() =>
-            auth.isAuthanticated ? <ScrumRouter /> : <Redirect to="/login" />
-          }
+          render={() => (false ? <ScrumRouter /> : <Redirect to="/login" />)}
         />
         <Route
           exact
           path="/admin"
-          render={() =>
-            auth.isAuthanticated ? <AdminRouter /> : <Redirect to="/login" />
-          }
+          render={() => (false ? <AdminRouter /> : <Redirect to="/login" />)}
         />
         <Route exact path="/">
           <Redirect to="/app" />

@@ -1,43 +1,13 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { LOGIN } from "../store/Auth/auth.store";
-import {
-  RESET_ERROR_STATE,
-  SHOW_ERROR_ALERT,
-} from "../store/Alert/alert.store";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const dispatch = useDispatch();
-
   const loginHandler = () => {
-    if (!email && !password) {
-      dispatch(
-        SHOW_ERROR_ALERT({
-          type: "SHOW_ERROR_MESSAGE",
-          payload: {
-            message: "Invalid email and password",
-          },
-        })
-      );
-      setTimeout(() => {
-        dispatch(RESET_ERROR_STATE());
-      }, 3000);
-      return;
-    }
-    dispatch(
-      LOGIN({
-        type: "LOGIN",
-        payload: {
-          email,
-          password,
-        },
-      })
-    );
+    if (!email && !password) return;
   };
 
   return (
