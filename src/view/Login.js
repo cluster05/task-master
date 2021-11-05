@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -8,10 +9,14 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const loginHandler = () => {
-    if (!email && !password) {
+    if (!email || !password) {
       toast.error("Email and Password are required field");
       return;
     }
+  };
+
+  const toggleShowPasswordHandler = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -34,29 +39,37 @@ const Login = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input
-              type="text"
-              placeholder="password"
-              className="input input-bordered"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <label className="label">
-              <Link to="/forgot-password" className="label-text-alt">
-                Forgot password ?
-              </Link>
-            </label>
-            <label className="label">
-              <Link to="/register" className="label-text-alt">
-                Dont have account ? Create new account
-              </Link>
-            </label>
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="password"
+                className=" pr-16 w-full input input-bordered"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span
+                onClick={toggleShowPasswordHandler}
+                class="absolute top-0 right-0 rounded-l-none btn btn-outline"
+              >
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </span>
+            </div>
           </div>
+          <label className="label">
+            <Link to="/forgot-password" className="label-text-alt">
+              Forgot password ?
+            </Link>
+          </label>
+          <label className="label">
+            <Link to="/register" className="label-text-alt">
+              Dont have account ? Create new account
+            </Link>
+          </label>
           <div className="form-control mt-6">
             <input
-              onClick={loginHandler}
               type="button"
               value="Login"
               className="btn btn-primary"
+              onClick={loginHandler}
             />
           </div>
         </div>
