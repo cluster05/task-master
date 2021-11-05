@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { forgotPassword } from "../services/auth.service";
 
 const ForgotPassword = () => {
+  const [email, setEmail] = useState("");
+
+  const forgotPasswordHandler = () => {
+    if (!email) {
+      toast.error("Email is required field");
+      return;
+    }
+    forgotPassword(email);
+  };
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card py-10 w-full max-w-md rounded border-2">
@@ -15,6 +27,7 @@ const ForgotPassword = () => {
               type="text"
               placeholder="email"
               className="input input-bordered"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <label className="label">
@@ -27,6 +40,7 @@ const ForgotPassword = () => {
               type="button"
               value="Forgot Passoword"
               className="btn btn-primary"
+              onClick={forgotPasswordHandler}
             />
           </div>
         </div>
