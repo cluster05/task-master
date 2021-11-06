@@ -9,12 +9,14 @@ import Projects from "../view/Scrum/Projects";
 import Settings from "../view/Scrum/Settings";
 import Tasks from "../view/Scrum/Tasks";
 import Sidebar from "../compoenents/Scrum/Sidebar";
+import Navbar from "../compoenents/Scrum/Navbar";
 
 const ScrumRouter = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="w-full" style={{ backgroundColor: "#F4F3F8" }}>
+      <div className="w-full px-6 pt-4" style={{ backgroundColor: "#F4F3F8" }}>
+        <Navbar />
         <Switch>
           <Route exact path="/app/account">
             <Account />
