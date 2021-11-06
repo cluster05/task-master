@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../compoenents/Scrum/Header";
 import { FiFilter, FiX } from "react-icons/fi";
+import ScrumBar from "../../compoenents/Scrum/ScrumBar";
 const Projects = () => {
   return (
     <div>
@@ -18,6 +19,12 @@ const Projects = () => {
           <span className="font-normal bg-purple-500 ">Filter</span>
         </button>
       </Header>
+      <div className="mt-4 grid grid-cols-4 gap-2">
+        <ScrumBar title="To Do" color="error" />
+        <ScrumBar title="In Progress" color="warning" />
+        <ScrumBar title="In Review" color="info" />
+        <ScrumBar title="Done" color="success" />
+      </div>
     </div>
   );
 };
