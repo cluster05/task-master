@@ -1,7 +1,7 @@
 import React from "react";
 
 const Tasks = () => {
-  return <div></div>;
+  return <div>tasks work</div>;
 };
 
 export default Tasks;

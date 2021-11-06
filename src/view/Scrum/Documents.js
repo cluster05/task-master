@@ -1,7 +1,7 @@
 import React from "react";
 
 const Documents = () => {
-  return <div></div>;
+  return <div>Documents works</div>;
 };
 
 export default Documents;
