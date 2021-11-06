@@ -6,13 +6,13 @@ const ScrumCard = () => {
     <div className="my-2 p-4 rounded border bg-white text-sm">
       <div className="cursor-pointer">
         <title className="block capitalize ">The Future of React Router</title>
-        <p className="mt-1 text-gray-400 text-xs leading-5">
+        <p className="mt-1 text-gray-500 text-xs leading-5">
           We are bringing together the best of React Router and Reach Router
           into a new, hook-based API. React Router will be the surviving
           project.
         </p>
       </div>
-      <div>
+      <div className="select-none">
         <div className="mt-2 flex justify-between items-center text-sm">
           <span className="text-gray-400 text-xs"> 50 of 100 % </span>
           <div className="px-1 rounded text-warning border border-warning bg-yellow-50 flex items-center">
@@ -28,23 +28,15 @@ const ScrumCard = () => {
           max="100"
         ></progress>
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between select-none">
         <div className="flex items-center">
-          <img
-            className="h-8 w-8 border border-white rounded-full"
-            src="https://via.placeholder.com/150"
-            alt="image_1"
-          />
-          <img
-            className="h-8 w-8 border border-white rounded-full"
-            src="https://via.placeholder.com/150"
-            alt="image_2"
-          />
-          <img
-            className="h-8 w-8 border border-white rounded-full"
-            src="https://via.placeholder.com/150"
-            alt="image_3"
-          />
+          <div data-tip="Ajay Kumbhar" class="tooltip">
+            <img
+              className="h-8 w-8 border border-white rounded-full"
+              src="https://via.placeholder.com/150"
+              alt="image_1"
+            />
+          </div>
         </div>
         <div className="flex items-center text-2xs">
           <div className="px-2 m-1 flex items-center rounded bg-gray-200 text-gray-400">
