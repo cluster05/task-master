@@ -36,7 +36,7 @@ module.exports = {
           "base-content": "#1f2937",
 
           info: "#2094f3",
-          success: "#0be586",
+          success: "#09c372",
           warning: "#fb9865",
           error: "#ff3860",
         },
