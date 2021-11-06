@@ -4,18 +4,17 @@ import Account from "../view/Scrum/Account";
 import Calender from "../view/Scrum/Calender";
 import Dashboard from "../view/Scrum/Dashboard";
 import Documents from "../view/Scrum/Documents";
+import Messages from "../view/Scrum/Messages";
 import Projects from "../view/Scrum/Projects";
 import Settings from "../view/Scrum/Settings";
 import Tasks from "../view/Scrum/Tasks";
 import Sidebar from "../compoenents/Scrum/Sidebar";
 
 const ScrumRouter = () => {
-  let { path } = useRouteMatch();
-
   return (
     <div className="flex">
       <Sidebar />
-      <div className="w-full">
+      <div className="w-full" style={{ backgroundColor: "#F4F3F8" }}>
         <Switch>
           <Route exact path="/app/account">
             <Account />
@@ -28,6 +27,9 @@ const ScrumRouter = () => {
           </Route>
           <Route exact path="/app/documents">
             <Documents />
+          </Route>
+          <Route exact path="/app/messages">
+            <Messages />
           </Route>
           <Route exact path="/app/projects">
             <Projects />
