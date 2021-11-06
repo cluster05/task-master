@@ -11,7 +11,7 @@ const ScrumBar = ({ title, color }) => {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between sticky -top-4 bg-white p-2 border shadow z-30">
         <div className="flex items-center">
           <span className={`w-3 h-3 rounded-full bg-${color}`}></span>
           <h3 className="mx-2"> {title} </h3>
