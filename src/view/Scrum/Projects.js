@@ -19,7 +19,7 @@ const Projects = () => {
           <span className="font-normal bg-purple-500 ">Filter</span>
         </button>
       </Header>
-      <div className="mt-4 grid grid-cols-4 gap-2">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
         <ScrumBar title="To Do" color="error" />
         <ScrumBar title="In Progress" color="warning" />
         <ScrumBar title="In Review" color="info" />
