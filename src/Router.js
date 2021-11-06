@@ -20,14 +20,12 @@ const Router = () => {
           <ForgotPassword />
         </Route>
         <Route
-          exact
           path="/app"
-          render={() => (false ? <ScrumRouter /> : <Redirect to="/login" />)}
+          render={() => (true ? <ScrumRouter /> : <Redirect to="/login" />)}
         />
         <Route
-          exact
           path="/admin"
-          render={() => (false ? <AdminRouter /> : <Redirect to="/login" />)}
+          render={() => (true ? <AdminRouter /> : <Redirect to="/login" />)}
         />
         <Route exact path="/">
           <Redirect to="/app" />

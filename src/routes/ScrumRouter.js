@@ -7,38 +7,42 @@ import Documents from "../view/Scrum/Documents";
 import Projects from "../view/Scrum/Projects";
 import Settings from "../view/Scrum/Settings";
 import Tasks from "../view/Scrum/Tasks";
+import Sidebar from "../compoenents/Scrum/Sidebar";
 
 const ScrumRouter = () => {
   let { path } = useRouteMatch();
 
   return (
-    <div>
-      <Switch>
-        <Route path={`${path}/account`}>
-          <Account />
-        </Route>
-        <Route path={`${path}/calender`}>
-          <Calender />
-        </Route>
-        <Route path={`${path}/dashboard`}>
-          <Dashboard />
-        </Route>
-        <Route path={`${path}/documents`}>
-          <Documents />
-        </Route>
-        <Route path={`${path}/projects`}>
-          <Projects />
-        </Route>
-        <Route path={`${path}/settings`}>
-          <Settings />
-        </Route>
-        <Route path={`${path}/tasks`}>
-          <Tasks />
-        </Route>
-        <Route path={`${path}/`}>
-          <Redirect to={`${path}/dashboard`} />
-        </Route>
-      </Switch>
+    <div className="flex">
+      <Sidebar />
+      <div className="w-full">
+        <Switch>
+          <Route exact path="/app/account">
+            <Account />
+          </Route>
+          <Route exact path="/app/calender">
+            <Calender />
+          </Route>
+          <Route exact path="/app/dashboard">
+            <Dashboard />
+          </Route>
+          <Route exact path="/app/documents">
+            <Documents />
+          </Route>
+          <Route exact path="/app/projects">
+            <Projects />
+          </Route>
+          <Route exact path="/app/settings">
+            <Settings />
+          </Route>
+          <Route exact path="/app/tasks">
+            <Tasks />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/app/dashboard" />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 };
