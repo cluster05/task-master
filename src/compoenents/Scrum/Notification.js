@@ -12,12 +12,11 @@ const Notification = () => {
             <p> {notification.timestamp} </p>
             <title className="block capitalize">{notification.title}</title>
             <p className="text-gray-400 text-2xs">
-              {" "}
               {notification.description}{" "}
             </p>
           </div>
         ))}
-        {notifications.length == 0 && (
+        {notifications.length === 0 && (
           <div className="py-5 capitalize text-center text-gray-300">
             no new notification
           </div>
