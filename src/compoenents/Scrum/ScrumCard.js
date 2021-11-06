@@ -23,14 +23,14 @@ const ScrumCard = () => {
           </div>
         </div>
         <progress
-          class="progress progress-success h-1 "
+          className="progress progress-success h-1 "
           value="50"
           max="100"
         ></progress>
       </div>
       <div className="flex items-center justify-between select-none">
         <div className="flex items-center">
-          <div data-tip="Ajay Kumbhar" class="tooltip">
+          <div data-tip="Ajay Kumbhar" className="tooltip">
             <img
               className="h-8 w-8 border border-white rounded-full"
               src="https://via.placeholder.com/150"
