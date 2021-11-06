@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect, useRouteMatch } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Account from "../view/Scrum/Account";
 import Calender from "../view/Scrum/Calender";
 import Dashboard from "../view/Scrum/Dashboard";
@@ -13,9 +13,12 @@ import Navbar from "../compoenents/Scrum/Navbar";
 
 const ScrumRouter = () => {
   return (
-    <div className="flex">
+    <div className="flex h-screen">
       <Sidebar />
-      <div className="w-full px-6 pt-4" style={{ backgroundColor: "#F4F3F8" }}>
+      <div
+        className="w-full px-6 pt-4 overflow-y-scroll"
+        style={{ backgroundColor: "#F4F3F8" }}
+      >
         <Navbar />
         <Switch>
           <Route exact path="/app/account">
