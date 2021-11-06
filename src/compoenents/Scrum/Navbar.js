@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="m-2 flex justify-between items-center">
+    <div className="flex justify-between items-center">
       <div className="p-1 border flex items-center bg-white rounded-lg">
         <span className="ml-2  text-xl">
           <FiSearch />
