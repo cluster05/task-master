@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../compoenents/Scrum/Header";
+import { FiPlay, FiStopCircle, FiPause } from "react-icons/fi";
 const Calender = () => {
   return (
     <div>
@@ -186,6 +187,39 @@ const Calender = () => {
           </div>
         </div>
         <div className="border-l">
+          <h3 className="m-5 font-medium">Time tracking</h3>
+          <div className="text-center py-5 border-b">
+            <p className="mt-2"> Meetings for QnA </p>
+            <p className="mt-2 text-xs text-gray-400 ">ADD AN ISSUE</p>
+            <h3 className="my-4 text-4xl font-medium"> 01:20:10 </h3>
+            <div className="mt-2">
+              <button className="mx-1 btn btn-accent btn-circle btn-sm">
+                {true ? <FiPlay /> : <FiStopCircle />}
+              </button>
+              <button className="mx-1 btn btn-accent btn-circle btn-sm">
+                <FiPause />
+              </button>
+            </div>
+          </div>
+          {/* ---------------------------------------------------------------------- */}
+          <h3 className="m-5 font-medium flex items-center">
+            <span>Google Calender Sync</span>
+            <div class="form-control ml-4 ">
+              <input type="checkbox" class="toggle toggle-sm toggle-accent" />
+            </div>
+          </h3>
+          <div className="px-1">
+            <div className="h-14 my-2 pl-4 text-sm shadow flex items-center border-l-4 border-warning hover:bg-gray-50">
+              <p className="px-2 py-1 whitespace-nowrap rounded bg-gray-200">
+                9:00 - 10:00
+              </p>
+              <div className="mx-4">
+                <title className="block capitalize ">
+                  The Future of React Router
+                </title>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
