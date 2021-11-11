@@ -1,5 +1,5 @@
 import React from "react";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowRight, FiPaperclip } from "react-icons/fi";
 import Header from "../../compoenents/Scrum/Header";
 
 const Messages = () => {
@@ -43,6 +43,250 @@ const Messages = () => {
       from: "Manoj Kumavat",
       to: "Ajay Kumbhar",
       message: "Can you fix this",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Sure give me 20 min",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Hello Monoj !",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Hi Ajay ",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "file",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      file: "https://via.placeholder.com/150",
+      alt: "placeholder com",
+      type: "image",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Can you fix this",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Sure give me 20 min",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Hello Monoj !",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Hi Ajay ",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "file",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      file: "https://via.placeholder.com/150",
+      alt: "placeholder com",
+      type: "image",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Can you fix this",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Sure give me 20 min",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Hello Monoj !",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Hi Ajay ",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "file",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      file: "https://via.placeholder.com/150",
+      alt: "placeholder com",
+      type: "image",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Can you fix this",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Sure give me 20 min",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Hello Monoj !",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Hi Ajay ",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "file",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      file: "https://via.placeholder.com/150",
+      alt: "placeholder com",
+      type: "image",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Can you fix this",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Sure give me 20 min",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Hello Monoj !",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Hi Ajay ",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "file",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      file: "https://via.placeholder.com/150",
+      alt: "placeholder com",
+      type: "image",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Manoj Kumavat",
+      to: "Ajay Kumbhar",
+      message: "Can you fix this",
+      send: Date.now(),
+      received: Date.now(),
+      read: Date.now(),
+    },
+    {
+      type: "text",
+      from: "Ajay Kumbhar",
+      to: "Manoj Kumavat",
+      message: "Sure give me 20 min",
       send: Date.now(),
       received: Date.now(),
       read: Date.now(),
@@ -91,16 +335,25 @@ const Messages = () => {
               <p className="text-xs text-gray-500"> last seen 4 PM </p>
             </div>
           </div>
-          <div className="">
-            {messages.map((message) => {
-              if (message.type == "text") {
-                return <MessageFile message={message} />;
-              } else if (message.type == "file") {
-                return <MessageRichTextEditor message={message} />;
-              }
+          <div className="mt-20 flex flex-col justify-end h-full">
+            {chatHistory.map((message, index) => {
+              return message.type === "text" ? (
+                <MessageRichTextEditor key={index} message={message} />
+              ) : (
+                <MessageFile key={index} message={message} />
+              );
             })}
           </div>
           <div className="p-2 flex items-center">
+            <div>
+              <label
+                for="document"
+                className="btn btn-accent  btn-circle text-xl"
+              >
+                <FiPaperclip />
+              </label>
+              <input type="file" id="document" className="hidden" />
+            </div>
             <div className="px-3 w-full">
               <input
                 type="text"
@@ -119,10 +372,57 @@ const Messages = () => {
 
 const MessageFile = ({ message }) => {
   return (
-    <div className="p-4 border border-gray-400 rounded ">{message.altm}</div>
+    <div
+      className="flex"
+      style={{
+        "justify-content":
+          message.from === "Ajay Kumbhar" ? "flex-end" : "flex-start",
+      }}
+    >
+      <p
+        className="px-3 py-5 mx-4 my-1 bg-gray-200 rounded  text-sm flex flex-col items-end"
+        style={{ width: "max-content" }}
+      >
+        <div className="px-4 py-3 border-2 border-gray-400  rounded flex items-center">
+          <span className="text-lg mr-4 ">
+            <FiPaperclip />
+          </span>
+          <p className="">{message.alt}</p>
+        </div>
+        <span className="text-2xs ml-2 text-gray-500">
+          {new Intl.DateTimeFormat("en-US", {
+            hour: "2-digit",
+            minute: "2-digit",
+          }).format(message.send)}
+        </span>
+      </p>
+    </div>
   );
 };
 
-const MessageRichTextEditor = ({ message }) => {};
+const MessageRichTextEditor = ({ message }) => {
+  return (
+    <div
+      className="flex"
+      style={{
+        "justify-content":
+          message.from === "Ajay Kumbhar" ? "flex-end" : "flex-start",
+      }}
+    >
+      <p
+        className="px-4 py-2 mx-4 my-1 bg-gray-200 rounded  text-sm "
+        style={{ width: "max-content" }}
+      >
+        <span> {message.message} </span>
+        <span className="text-2xs ml-2 text-gray-500">
+          {new Intl.DateTimeFormat("en-US", {
+            hour: "2-digit",
+            minute: "2-digit",
+          }).format(message.send)}
+        </span>
+      </p>
+    </div>
+  );
+};
 
 export default Messages;
